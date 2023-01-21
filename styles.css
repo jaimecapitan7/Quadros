@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+}
+
+.section{
+    min-height: 50vh;
+}
+
+.section-title{
+    background-color: #500000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    padding-top: 70px; /* spacer for navbar*/
+    padding-bottom: 20px;
+}
+
+.adress-bar{
+    background-color: #500000;
+    color: white;
+}
+
+#banner{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    overflow: hidden;
+    /* max-height: calc(100vh - 70px); */
+}
+
+#banner video{
+    /* height: calc(100vh - 70px); */
+}
+
+#about-us{
+    background-color: #303642;
+    color: white;
+    padding: 70px;
+}
+
+#order-page{
+    background-color: #FFF6ED;
+}
+
+#location {
+    background-color: #303642;
+}
