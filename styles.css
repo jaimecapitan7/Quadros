@@ -22,15 +22,18 @@
 }
 
 #banner{
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    overflow: hidden;
-    /* max-height: calc(100vh - 70px); */
+    position: relative;
+    height: calc(100vh - 70px);
 }
 
 #banner video{
-    /* height: calc(100vh - 70px); */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    min-height: 100%;
+    min-width: 100%;
+    overflow: hidden;
 }
 
 #about-us{
