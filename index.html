@@ -59,17 +59,18 @@
             <div class="brand-logo">Quadros Pares</div>
             <div class="scroller">
                 <span>
-                    Cool<br/>
-                    Art<br/>
-                    Intruiging<br/>
-                    Challenging
+                    Perfect<br/>
+                    Aromatic<br/>
+                    Redolent<br/>
+                    Exquisite<br/>
+                    Seasoned
                 </span>
             </div>
         </div>
     </div>
     <div class="section" id="about-us">
         <div class="container">
-            <h1>For the love of pares</h1>
+            <h1>For the love of pares <br>_</h1>
             <p>Our signature dish, beef pares, is a slow-cooked beef stew made with tender cuts of beef, spices, and soy sauce. </p>
             <p> We take pride in using only the freshest ingredients to bring the rich flavors of the Philippines to your plate. We invite you to come and try our delicious beef pares and other traditional Filipino dishes.</p>
         </div>
@@ -97,22 +98,38 @@
             </ul>
         </div>
     </div>
-    <div class="container">
-        <form>
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-              </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+
+    <div class="contact-form">
+        <div class="container d-flex">
+            <div class="form-left">
+                <h3 class="section-title">Contact Form<br>_</h3>
+    
+                <p>Have any questions? Try checking our FAQS - and if you still need help, reach out and we'll do our best!</p>
+    
+                <p>Use the form for general inquiries. For business inquiries please email: business@redarcade.com</p>
+            </div>
+    
+            <div class="form-right">
+            <form id="message-form">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address:</label>
+                    <input type="email" class="form-control" id="email">
+                    <small id="emailError"></small>
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Message:</label>
+                    <textarea class="form-control" id="message" rows="3"></textarea>
+                    <small id="messageError"></small>
+                  </div>
+                <button id="submit-btn" type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+        </div>
     </div>
     <footer>
 
     </footer>
-    <script type="module" src="js/index.js"></script>
+    <script src="js/index.js"></script>
+    <script src="./js/validation.js"></script>
 </body>
 </html>

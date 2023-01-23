@@ -1,6 +1,34 @@
-import myJson from './menulist.json' assert {type: 'json'};
 
-const menulist = myJson;
+const menulist = [
+    {
+    "category" : "Main Dish",
+    "menulist" : [
+        {
+            "name":"Pares",
+            "price": 30,
+            "Description": "",
+            "rating": 5
+        },
+        {
+            "name":"Tapsilog",
+            "price": 30,
+            "Description": "Tapa, Fride Rice and Egg",
+            "rating": 3
+        }
+    ]
+    },
+    {
+        "category" : "Drinks",
+        "menulist" : [
+            {
+                "name":"Coke",
+                "price": 20,
+                "Description": "with Ice",
+                "rating": 3
+            }
+        ]
+    }
+];
 
 console.log(menulist);
 
@@ -31,3 +59,4 @@ const loadMenu = () => {
 }
 
 loadMenu();
+

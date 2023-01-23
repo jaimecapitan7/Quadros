@@ -4,7 +4,7 @@
     margin: 0;
 }
 
-p{
+p, label, .form-control{
     font-size: 20px;
     font-family: 'Nunito', sans-serif;
 }
@@ -20,7 +20,7 @@ p{
     font-size: 70px;
     font-family: 'Sriracha', cursive;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     padding-top: 70px; /* spacer for navbar*/
     padding-bottom: 20px;
 }
@@ -147,21 +147,59 @@ p{
   .scroller > span {
     position: absolute;
     top: 0;
-    animation: slide 5s infinite;
+    animation: slide 6.5s infinite;
     font-weight: bold;
   }
   @keyframes slide {
     0% {
       top: 0;
     }
-    25% {
+    20% {
       top: -1.2em;
     }
-    50% {
+    40% {
       top: -2.4em;
     }
-    75% {
+    60% {
       top: -3.6em;
     }
+    80% {
+      top: -4.8em;
+    }
+  }
+
+  .contact-form {
+    display: flex;
+    background-image: url(./asset/graybg.jpg);
+    background-repeat: repeat;
+    color: #ffffff;
+  }
+
+  .contact-form .form-left {
+    width: 50%;
+    padding-right: 50px;
+  }
+  .contact-form .form-right {
+    width: 50%;
+    padding: 90px 0px 10px 130px;
+  }
+
+  .contact-form .form-right small {
+    color: #AB3903;
+    font-size: larger;
+  }
+
+  .contact-form .form-right button {
+    background-color: #AB3903;
+    font-size: 20px;
+    border: transparent;
+    padding: 8px 15px;
+    width: 100%;
+    margin-top: 25px;
   }
   
+  .contact-form .form-right button:hover {
+    background-color: #ffffff;
+    color: #AB3903;
+    border: #AB3903
+  }
