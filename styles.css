@@ -1,39 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Nunito:wght@300;600&family=Sriracha&display=swap');
 
 *{
     margin: 0;
 }
 
 p{
-    font-size: 2em;
+    font-size: 20px;
     font-family: 'Nunito', sans-serif;
 }
 
 .section{
-    min-height: 95vh;
+    min-height: 100vh;
     position: relative;
 }
 
 .section-title{
-    background-color: #500000;
-    color: white;
+    /* background-color: #500000; */
+    color: inherit;
+    font-size: 70px;
+    font-family: 'Sriracha', cursive;
     display: flex;
     justify-content: center;
-    font-size: 30px;
     padding-top: 70px; /* spacer for navbar*/
     padding-bottom: 20px;
+}
+
+.nav-link{
+    font-family: 'Comic Neue', cursive;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.navbar-nav{
+    margin-left: auto;
 }
 
 .adress-bar{
     background-color: #500000;
     color: white;
+    padding: 2px;
+    font-size: 15px;
+    font-family: 'Nunito', sans-serif;
 }
 
 #banner{
     position: relative;
-    height: calc(100vh - 70px);
+    height: 100vh;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #banner video{
@@ -46,21 +62,43 @@ p{
 }
 
 #about-us{
-    /* background-color: #303642; */
     background: radial-gradient(circle at 50% 50%, #f58b26, #cd692e, #a04b2e, #723328, #441e1c, #1a0909);
+    /* background: linear-gradient(180deg, #f58b26 0%,#cd692e 10%, #723328 50%, #1a0909 100%); */
     clip-path: polygon(0 9vw, 100% 0, 100% 100%, 0 100%);
     color: white;
-    margin-top: -400px;
-    padding-top: 300px;
+    margin-top: -9vw;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 
 #about-us h1{
-    font-size: 7em;
+    font-size: 70px;
     font-family: 'Sriracha', cursive;
 }
 
+#menu{
+    background: radial-gradient(circle at 50% 50%, #ffffff, #fffffe, #fffefb, #fffcf7, #fffaf2, #fff8ec, #fff5e6, #fff3e1, #fff1dc, #ffefd8, #ffeed5, #ffeed4);
+    /* background: linear-gradient(180deg, #fafbff 0%, #ffe6c0 100%); */
+    clip-path: polygon(0 9vw, 100% 0, 100% 100%, 0 100%);
+    color: rgb(0, 0, 0);
+    margin-top: -9vw;
+    padding-top: 200px;
+}
+
+#menulist{
+    color: inherit;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
 #order-page{
-    background-color: #FFF6ED;
+    background: linear-gradient(180deg, #303642 0%, #101216 100%);
+    clip-path: polygon(0 0, 100% 9vw, 100% 100%, 0 100%);
+    color: white;
+    margin-top: -9vw;
+    padding-top: 200px;
 }
 
 #location {
@@ -78,3 +116,43 @@ p{
     top: 280px;
     left: 20px;
 }
+
+.brand{
+    color: white;
+}
+
+.brand-logo{
+    position: relative;
+    font-size: 120px ;
+    font-family: 'Sriracha', cursive;
+}
+/* Scroller styling */
+.scroller {
+    font-size: 40px;
+    font-family: 'Nunito', sans-serif;
+    height: 1.2em;
+    line-height: 1.2em;
+    position: relative;
+    overflow: hidden;
+    width: 10em;
+  }
+  .scroller > span {
+    position: absolute;
+    top: 0;
+    animation: slide 5s infinite;
+    font-weight: bold;
+  }
+  @keyframes slide {
+    0% {
+      top: 0;
+    }
+    25% {
+      top: -1.2em;
+    }
+    50% {
+      top: -2.4em;
+    }
+    75% {
+      top: -3.6em;
+    }
+  }

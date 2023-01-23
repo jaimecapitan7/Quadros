@@ -22,18 +22,19 @@
 </head>
 <body>
     <div class="adress-bar">
-        <div class="container">
-            MOA Pasay, Philippines
+        <div class="container d-flex justify-content-center">
+            <!-- MOA Pasay, Philippines -->
+            G/F, Main Mall, Seaside Blvd, 123, Pasay, Philippines 1300
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top p-0">
         <div class="container">
             <a class="navbar-brand" href="#">Quadros Pares</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#about-us">About</a>
                     </li>
@@ -50,10 +51,21 @@
             </div>
         </div>
     </nav>
-    <div class="section" id="banner">
+    <div id="banner">
         <video autoplay muted loop id="myVideo">
             <source src="./asset/Kapitan Pares.mp4" type="video/mp4">
         </video>
+        <div class="brand">
+            <div class="brand-logo">Quadros Pares</div>
+            <div class="scroller">
+                <span>
+                    Cool<br/>
+                    Art<br/>
+                    Intruiging<br/>
+                    Challenging
+                </span>
+            </div>
+        </div>
     </div>
     <div class="section" id="about-us">
         <div class="container">
@@ -64,6 +76,7 @@
     </div>
     <div class="section" id="menu">
         <div class="section-title">Menu</div>
+        <div id="menulist"></div>
     </div>
     <div class="section" id="order-page">
         <div class="section-title">My Orders</div>
@@ -100,5 +113,6 @@
     <footer>
 
     </footer>
+    <script type="module" src="js/index.js"></script>
 </body>
 </html>
