@@ -44,7 +44,7 @@ messageForm.addEventListener(
             console.log('IT IS A SUCCESS');
         }
         else {
-            console.log('Tanga tanga mo');
+            console.log('IT IS A FAILURE');
         }
 
     }
