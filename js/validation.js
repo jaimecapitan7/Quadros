@@ -1,4 +1,4 @@
-const submit = document.querySelector('#submit-btn');
+
 const email = document.querySelector('#email');
 const emailError = document.querySelector('#emailError');
 const message = document.querySelector('#message');
@@ -29,11 +29,10 @@ const validateMessage = () => {
 
 }
 
-submit.addEventListener(
-    'click',
+messageForm.addEventListener(
+    'submit',
     (e) => {
         e.preventDefault();
-
 
         validateEmail();
         validateMessage();
