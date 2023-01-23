@@ -17,6 +17,7 @@ const validateEmail = () => {
         emailError.innerText = '*Please enter a valid email*';
     }
 
+
     
 }
 const validateMessage = () => {
@@ -34,9 +35,17 @@ messageForm.addEventListener(
     (e) => {
         e.preventDefault();
 
+
         validateEmail();
         validateMessage();
+       
         // messageForm.reset();
+        if ( messageError.innerText === "" && emailError.innerText === ""){
+            console.log('IT IS A SUCCESS');
+        }
+        else {
+            console.log('Tanga tanga mo');
+        }
 
     }
 )
