@@ -35,7 +35,7 @@ p{
     margin-left: auto;
 }
 
-.adress-bar{
+.address-bar{
     background-color: #500000;
     color: white;
     padding: 2px;
@@ -62,8 +62,10 @@ p{
 }
 
 #about-us{
-    background: radial-gradient(circle at 50% 50%, #f58b26, #cd692e, #a04b2e, #723328, #441e1c, #1a0909);
-    /* background: linear-gradient(180deg, #f58b26 0%,#cd692e 10%, #723328 50%, #1a0909 100%); */
+    /* background: radial-gradient(circle at 50% 50%, #f58b26, #cd692e, #a04b2e, #723328, #441e1c, #1a0909); */
+    /* background: linear-gradient(0deg, #f58b26 0%,#cd692e 10%, #723328 50%, #1a0909 100%); */
+    background-image:url(./asset/trial2.jpg);
+    background-size: cover;
     clip-path: polygon(0 9vw, 100% 0, 100% 100%, 0 100%);
     color: white;
     margin-top: -9vw;
@@ -77,10 +79,13 @@ p{
 }
 
 #menu{
-    background: radial-gradient(circle at 50% 50%, #ffffff, #fffffe, #fffefb, #fffcf7, #fffaf2, #fff8ec, #fff5e6, #fff3e1, #fff1dc, #ffefd8, #ffeed5, #ffeed4);
-    /* background: linear-gradient(180deg, #fafbff 0%, #ffe6c0 100%); */
-    clip-path: polygon(0 9vw, 100% 0, 100% 100%, 0 100%);
-    color: rgb(0, 0, 0);
+    /* background: radial-gradient(circle at 50% 50%, #ffffff, #fffffe, #fffefb, #fffcf7, #fffaf2, #fff8ec, #fff5e6, #fff3e1, #fff1dc, #ffefd8, #ffeed5, #ffeed4); */
+    /* background: linear-gradient(180deg, #db4632, #d44230, #c1392c, #a72d26, #8a1f1e, #6e1216, #56070e, #460104, #400000); */
+    background-image: url(./asset/whitebg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    clip-path: polygon(0 0, 100% 9vw, 100% 100%, 0 100%);
+    color: rgb(29, 27, 27);
     margin-top: -9vw;
     padding-top: 200px;
 }
@@ -94,9 +99,11 @@ p{
 }
 
 #order-page{
-    background: linear-gradient(180deg, #303642 0%, #101216 100%);
-    clip-path: polygon(0 0, 100% 9vw, 100% 100%, 0 100%);
-    color: white;
+    /* background: linear-gradient(180deg, #303642 0%, #101216 100%); */
+    background-image: url(./asset/darkbg.jpg);
+    background-size: cover;
+    clip-path: polygon(0 9vw, 100% 0, 100% 100%, 0 100%);
+    color: rgb(255, 255, 255);
     margin-top: -9vw;
     padding-top: 200px;
 }
@@ -106,6 +113,7 @@ p{
     display: flex;
     flex-direction: column;
     position: relative;
+    margin-top: -2px;
 }
 
 .floating-card{
@@ -156,3 +164,4 @@ p{
       top: -3.6em;
     }
   }
+  
