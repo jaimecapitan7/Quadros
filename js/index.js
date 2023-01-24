@@ -108,17 +108,47 @@ const loadMenu = () => {
         const categoryCard = document.createElement('div');
         categoryCard.classList.add('categoryCard');
         categoryCard.id = categories.category;
-        categoryCard.innerHTML = ` <div class="categoryName">${categories.category}</div>`;
+
+        const categoryCardDiv = document.createElement("div");
+        categoryCardDiv.classList.add("categoryName");
+        categoryCard.append(categoryCardDiv);
+        categoryCardDiv.innerText = `${categories.category}`;
+
         for ( let menu of categories.menulist ) {
-            categoryCard.innerHTML +=`<div class="menu-list">
-                                            <div class="menu-item">
-                                                <div class="menu-master">
-                                                <div class="menu-name">${menu.name}</div>
-                                                <div class="menu-description">${menu.Description}</div>
-                                                </div>
-                                                <div class="menu-price">${menu.price}</div>
-                                            </div>
-                                        </div>`
+            
+            const menu_listDiv =  document.createElement("div");
+            menu_listDiv.classList.add("menu-list");
+            categoryCard.append(menu_listDiv);
+
+            const menu_itemDiv = document.createElement("div");
+            menu_itemDiv.classList.add("menu-item");
+            menu_listDiv.append(menu_itemDiv);
+
+            const menu_masterDiv = document.createElement("div");
+            menu_masterDiv.classList.add("menu-master");
+            const menu_priceDiv = document.createElement("div");
+            menu_priceDiv.classList.add("menu-price");
+            menu_itemDiv.append(menu_masterDiv, menu_priceDiv);
+
+            const menu_nameDiv = document.createElement("div");
+            menu_nameDiv.classList.add("menu-name");
+            const menu_desDiv = document.createElement("div");
+            menu_desDiv.classList.add("menu-description");
+            menu_masterDiv.append(menu_nameDiv, menu_desDiv);
+            menu_nameDiv.innerText = `${menu.name}`;
+            menu_desDiv.innerText = `${menu.Description}`;
+
+            menu_priceDiv.innerText = `${menu.price}`;
+            
+            // categoryCard.innerHTML +=`<div class="menu-list">
+            //                                 <div class="menu-item">
+            //                                     <div class="menu-master">
+            //                                         <div class="menu-name">${menu.name}</div>
+            //                                         <div class="menu-description">${menu.Description}</div>
+            //                                     </div>
+            //                                     <div class="menu-price">${menu.price}</div>
+            //                                 </div>
+            //                             </div>`
                                     
         }
         // categoryCard.innerHTML +=`</div>`;

@@ -35,9 +35,9 @@ p, label, .form-control{
     color: #AB3903;
 }
 
-.navbar{
-  /* background-color: transparent !important; */
-}
+/* .navbar{
+  background-color: transparent !important;
+} */
 .navbar-nav{
     margin-left: auto;
 }
