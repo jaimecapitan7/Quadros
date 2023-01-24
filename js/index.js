@@ -23,6 +23,31 @@ const menulist = [
         }
     ]
     },
+    
+    {
+        "category" : "Rice Meals ",
+        "menulist" : [
+            {
+                "name":"Q’s Porkchop with Veggies ",
+                "price": 130,
+                "Description": "Breaded Porkchop + Rice + Veggies",
+                "rating": 3
+            },
+            {
+            "name":"Q’s Sisig with rice with Egg  ",
+                "price": 135,
+                "Description": "Spicy/Regular Sizzling Sisig + Rice + Egg",
+                "rating": 3
+            },
+            {
+                "name":"Q’s Lechon kawali",
+                    "price": 130,
+                    "Description": "Crunchy Lechon Kawali + Rice",
+                    "rating": 3
+                },
+        ]
+    },
+
     {
         "category" : "Toppings",
         "menulist" : [
@@ -45,29 +70,6 @@ const menulist = [
                 "rating": 3
             },
             
-        ]
-    },
-    {
-        "category" : "Rice Meals ",
-        "menulist" : [
-            {
-                "name":"Q’s Porkchop with Veggies ",
-                "price": 130,
-                "Description": "Breaded Porkchop + Rice + Veggies",
-                "rating": 3
-            },
-            {
-            "name":"Q’s Sisig with rice with Egg  ",
-                "price": 135,
-                "Description": "Spicy/Regular Sizzling Sisig + Rice + Egg",
-                "rating": 3
-            },
-            {
-                "name":"Q’s Lechon kawali",
-                    "price": 130,
-                    "Description": "Crunchy Lechon Kawali + Rice",
-                    "rating": 3
-                },
         ]
     },
     {
@@ -96,6 +98,7 @@ const menulist = [
 ];
 
 
+
 const menulistDisplay = document.querySelector("#menulist");
 
 
@@ -103,24 +106,30 @@ const menulistDisplay = document.querySelector("#menulist");
 const loadMenu = () => {
     for ( let categories of menulist ) {
         const categoryCard = document.createElement('div');
-        categoryCard.innerHTML = `
-            <div class="categoryCard">
-                <div class="categoryName">${categories.category}</div>`;
+        categoryCard.classList.add('categoryCard');
+        categoryCard.id = categories.category;
+        categoryCard.innerHTML = ` <div class="categoryName">${categories.category}</div>`;
         for ( let menu of categories.menulist ) {
-            categoryCard.innerHTML +=`<ul class="menu-list">
-                                            <li class="menu-item">
+            categoryCard.innerHTML +=`<div class="menu-list">
+                                            <div class="menu-item">
+                                                <div class="menu-master">
                                                 <div class="menu-name">${menu.name}</div>
                                                 <div class="menu-description">${menu.Description}</div>
+                                                </div>
                                                 <div class="menu-price">${menu.price}</div>
-                                            </li>
-                                        </ul>`
+                                            </div>
+                                        </div>`
                                     
         }
-        categoryCard.innerHTML +=`</div>`;
+        // categoryCard.innerHTML +=`</div>`;
     
         menulistDisplay.append(categoryCard);
     }
 }
 
 loadMenu();
+
+// const menuitem = document.querySelectorAll('.menuItem')
+
+
 

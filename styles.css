@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Nunito:wght@300;600&family=Sriracha&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     margin: 0;
 }
@@ -104,15 +104,71 @@ p, label, .form-control{
     background-attachment: fixed;
     clip-path: polygon(0 7vw, 100% 0, 100% 100%, 0 100%);
     color: rgb(29, 27, 27);
+  
 }
-
 #menulist{
     color: inherit;
     font-size: 20px;
     font-family: 'Nunito', sans-serif;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+
+
 }
+
+.menu-logo{
+  padding: 10px;
+  margin: 5px;
+  width: 340px;
+  order: 2;
+}
+
+.categoryCard {
+  padding: 10px;
+  margin: 5px;
+  width: 340px;
+  order: 3;
+}
+#Pares{
+  order: 1;
+}
+.categoryName {
+  font-weight: bolder;
+  font-size: 40px;
+  margin: 5px;
+  border-bottom: solid gray 1px;
+}
+
+.menu-item {
+  margin: 50px 10px;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu-master{
+  border-right: solid gray 1px;
+  width: 280px;
+}
+
+.menu-name {
+  font-weight: bold;
+}
+
+.menu-description {
+  font-style: italic;
+  font-size: 15px;
+  
+}
+.menu-price {
+  font-style: italic;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 0px 10px;
+}
+
 
 #order-page{
     /* background: linear-gradient(180deg, #303642 0%, #101216 100%); */
@@ -181,6 +237,7 @@ p, label, .form-control{
     animation: slide 6.5s infinite;
     font-weight: bold;
   }
+
   @keyframes slide {
     0% {
       top: 0;
