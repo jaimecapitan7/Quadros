@@ -76,7 +76,8 @@ p, label, .form-control{
     /* background-image:url(./asset/trial2.jpg); */
     background-image: url(./asset/darkbg.jpg);
     background-size: cover;
-    clip-path: polygon(0 7vw, 100% 0, 100% 100%, 0 100%);
+    margin-top: 0;
+    /* clip-path: polygon(0 7vw, 100% 0, 100% 100%, 0 100%); */
     color: white;
 }
 
