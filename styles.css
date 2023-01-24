@@ -36,7 +36,7 @@ p, label, .form-control{
 }
 
 .navbar{
-  background-color: transparent !important;
+  /* background-color: transparent !important; */
 }
 .navbar-nav{
     margin-left: auto;
@@ -125,14 +125,25 @@ p, label, .form-control{
 
 #location {
     /* background-color: #303642; */
-    clip-path: polygon(0 7vw, 100% 0, 100% 100%, 0 100%); 
-    background-image:url(./asset/smoky.jpg);
-    background-size: cover;
+    /* clip-path: polygon(0 7vw, 100% 0, 100% 100%, 0 100%);  */
+    /* background-image:url(./asset/smoky.jpg);
+    background-size: cover; */
+    min-height: unset;
+    height: 50vh;
     color: white;
     display: flex;
     flex-direction: column;
     position: relative;
-    margin-top: -2px;
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .floating-card{
@@ -188,20 +199,14 @@ p, label, .form-control{
   }
 
   .contact-form {
-    clip-path: polygon(0 0, 100% 7vw, 100% 100%, 0 100%);
-    display: flex;
+    /* clip-path: polygon(0 0, 100% 7vw, 100% 100%, 0 100%); */
+    /* display: flex; */
+    margin: 0;
+    min-height: unset;
+    height: 50vh;
     background-image: url(./asset/graybg.jpg);
     background-repeat: repeat;
     color: #ffffff;
-  }
-
-  .contact-form .form-left {
-    width: 50%;
-    padding-right: 50px;
-  }
-  .contact-form .form-right {
-    width: 50%;
-    padding: 90px 0px 10px 130px;
   }
 
   .contact-form .form-right small {
