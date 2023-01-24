@@ -1,4 +1,3 @@
-import myJson from './menulist.json' assert {type: 'json'};
 
 const menulist = [
     {
@@ -60,3 +59,4 @@ const loadMenu = () => {
 }
 
 loadMenu();
+

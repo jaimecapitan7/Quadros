@@ -4,7 +4,7 @@
     margin: 0;
 }
 
-p{
+p, label, .form-control{
     font-size: 20px;
     font-family: 'Nunito', sans-serif;
 }
@@ -132,6 +132,7 @@ p{
     display: flex;
     flex-direction: column;
     position: relative;
+    margin-top: -2px;
 }
 
 .floating-card{
@@ -165,20 +166,20 @@ p{
   .scroller > span {
     position: absolute;
     top: 0;
-    animation: slide 5s infinite;
+    animation: slide 6.5s infinite;
     font-weight: bold;
   }
   @keyframes slide {
     0% {
       top: 0;
     }
-    25% {
+    20% {
       top: -1.2em;
     }
-    50% {
+    40% {
       top: -2.4em;
     }
-    75% {
+    60% {
       top: -3.6em;
     }
     80% {
