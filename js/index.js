@@ -57,9 +57,9 @@ const menulist = [
                 "rating": 3
             },
             {
-            "name":"Q’s Sisig with rice  ",
+            "name":"Q’s Sisig with rice with Egg  ",
                 "price": 135,
-                "Description": "Spicy/Regular Sizzling Sisig + Rice",
+                "Description": "Spicy/Regular Sizzling Sisig + Rice + Egg",
                 "rating": 3
             },
             {
@@ -74,9 +74,9 @@ const menulist = [
         "category" : "Extras",
         "menulist" : [
             {
-                "name":"Fried Rice",
+                "name":"Garlic Fried Rice",
                 "price": 25,
-                "Description": "Garlic Fried Rice",
+                "Description": "Fried Rice + Toasted Garlic",
                 "rating": 3
             },
             {
