@@ -64,11 +64,7 @@ messageForm.addEventListener(
         // messageForm.reset();
         if ( messageError.innerText === "" && emailError.innerText === ""){
             sendMail();
-            console.log('IT IS A SUCCESS');
+            
         }
-        else {
-            console.log('IT IS A FAILURE');
-        }
-
     }
 )
