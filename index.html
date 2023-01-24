@@ -18,6 +18,8 @@
         crossorigin="anonymous"
         defer
     ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.2.2/ol.css">
+    <script src="https://cdn.jsdelivr.net/npm/ol@v7.2.2/dist/ol.js"></script>
 
 </head>
 <body>
@@ -70,66 +72,84 @@
     </div>
     <div class="section" id="about-us">
         <div class="container">
-            <h1>For the love of pares <br>_</h1>
-            <p>Our signature dish, beef pares, is a slow-cooked beef stew made with tender cuts of beef, spices, and soy sauce. </p>
-            <p> We take pride in using only the freshest ingredients to bring the rich flavors of the Philippines to your plate. We invite you to come and try our delicious beef pares and other traditional Filipino dishes.</p>
+            <div class="row justify-content-between">
+                <div class="col-lg-6 col-sm-10">
+                    <div class="section-title">For the love of pares<br>_</div>
+                    <!-- <h1>For the love of pares <br>_</h1> -->
+                    <p>Our signature dish, beef pares, is a slow-cooked beef stew made with tender cuts of beef, spices, and soy sauce. </p>
+                    <p> We take pride in using only the freshest ingredients to bring the rich flavors of the Philippines to your plate. We invite you to come and try our delicious beef pares and other traditional Filipino dishes.</p>
+                </div>
+                <div class="col-lg-5 col-sm-10">
+                    <div class="img-container-circle">
+                        <img src="./asset/handBowl.jpg" alt="ang sarap ng Pares">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="section" id="menu">
-        <div class="section-title">Menu</div>
-        <div id="menulist"></div>
-    </div>
-    <div class="section" id="order-page">
-        <div class="section-title">My Orders</div>
-    </div>
-    <div class="section" id="location">
-        <div class="section-title">Our location</div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.1174625218923!2d120.98037881526945!3d14.535273089844113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cbfc84288ed7%3A0xe842057d2e701f9b!2sSM%20Mall%20of%20Asia!5e0!3m2!1sen!2sph!4v1669695527718!5m2!1sen!2sph"
-                style="border:0; flex-grow: 1"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-        <div class="floating-card">
-            <ul>
-                <li>Open Hours</li>
-                <li>Mon-Fri 10AM-6PM</li>
-                <li>Sat-Sun 10AM-5PM</li>
-            </ul>
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-6 col-sm-10">
+                    <div class="section-title">Menu<br>_</div>
+                </div>
+                <div class="col-lg-5 col-sm-10">
+                    <div id="menulist"></div>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="contact-form">
-        <div class="container d-flex">
-            <div class="form-left">
-                <h3 class="section-title">Contact Form<br>_</h3>
-    
-                <p>Have any questions? Try checking our FAQS - and if you still need help, reach out and we'll do our best!</p>
-    
-                <p>Use the form for general inquiries. For business inquiries please email: business@redarcade.com</p>
+    <div class="section" id="order-page">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-6 col-sm-10">
+                    <div class="section-title">Orders<br>_</div>
+                </div>
+                <div class="col-lg-5 col-sm-10">
+                    <div id="menulist"></div>
+                </div>
             </div>
-    
-            <div class="form-right">
-                <form id="message-form">
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email address:</label>
-                        <input type="text" class="form-control" id="email">
-                        <small id="emailError"></small>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message:</label>
-                        <textarea class="form-control" id="message" rows="3"></textarea>
-                        <small id="messageError"></small>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+        </div>
+    </div>
+    <div class="section" id="location">
+        <div id="map"></div>
+    </div>
+    <div class="section contact-form">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="form-left col-lg-6 col-sm-12">
+                    <h3 class="section-title">Contact Form<br>_</h3>
+                    <p>Have any questions? Reach out and we'll do our best!</p>
+                    <p>Use the form for general inquiries. For business inquiries please email: business@redarcade.com</p>
+                </div>
+                <div class="form-right col-lg-5 col-sm-12">
+                    <form id="message-form">
+                        <div class="mb-3 mt-5">
+                            <label for="email" class="form-label">Email address:</label>
+                            <input type="text" class="form-control" id="email">
+                            <small id="emailError"></small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message:</label>
+                            <textarea class="form-control" id="message" rows="3"></textarea>
+                            <small id="messageError"></small>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
     <footer>
-
+        <div class="address-bar">
+            <div class="container d-flex justify-content-center">
+                <!-- MOA Pasay, Philippines -->
+                G/F, Main Mall, Seaside Blvd, 123, Pasay, Philippines 1300
+            </div>
+        </div>
     </footer>
     <script src="js/index.js"></script>
     <script src="./js/validation.js"></script>
+    <script src="./js/map.js"></script>
 </body>
 </html>

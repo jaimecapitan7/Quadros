@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.1.0/ol.css">
+    <script src="https://cdn.jsdelivr.net/npm/ol@v7.1.0/dist/ol.js"></script>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        const map = new ol.Map({
+            layers: [
+                new ol.layer.Tile({
+                source: new ol.source.TileJSON({
+                    url: `https://api.maptiler.com/maps/streets-v2/tiles.json?key=jMorm2vagAPeTZsIB7D5`,
+                    tileSize: 512,
+                    // crossOrigin: 'anonymous' 
+                })
+                })
+            ],
+            target: 'map',
+            view: new ol.View({
+                constrainResolution: true,
+                center: ol.proj.fromLonLat([16.62662018, 49.2125578]),
+                zoom: 14
+            })
+            });
+    </script>
+</body>
+</html>

@@ -12,7 +12,7 @@ const menulist = [
         {
             "name":"Tapsilog",
             "price": 30,
-            "Description": "Tapa, Fride Rice and Egg",
+            "Description": "Tapa, Fried Rice and Egg",
             "rating": 3
         }
     ]
