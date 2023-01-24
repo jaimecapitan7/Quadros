@@ -95,7 +95,6 @@ const menulist = [
     }
 ];
 
-console.log(menulist);
 
 const menulistDisplay = document.querySelector("#menulist");
 
