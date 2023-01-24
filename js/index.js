@@ -160,6 +160,3 @@ const loadMenu = () => {
 loadMenu();
 
 // const menuitem = document.querySelectorAll('.menuItem')
-
-
-

@@ -11,15 +11,18 @@
         rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/map.css">
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"
         defer
     ></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.2.2/ol.css">
-    <script src="https://cdn.jsdelivr.net/npm/ol@v7.2.2/dist/ol.js"></script>
+    <!-- mapbox -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css' rel='stylesheet' />
+
 
 </head>
 <body>
@@ -55,7 +58,7 @@
     </nav>
     <div id="banner">
         <video autoplay muted loop id="myVideo">
-            <source src="./asset/Kapitan Pares.mp4" type="video/mp4">
+            <source src="./asset/KapitanPares.mp4" type="video/mp4">
         </video>
         <div class="brand">
             <div class="brand-logo">Quadros Pares</div>
@@ -107,13 +110,49 @@
         </div>
     </div>
     <div class="section" id="location">
-        <div id="map"></div>
+        <div id='map'></div>
+        <div id="map-menu">
+            <!-- See a list of Mapbox-hosted public styles at -->
+            <!-- https://docs.mapbox.com/api/maps/styles/#mapbox-styles -->
+            <div class="map-radio">
+                <input id="streets-v12" type="radio" name="rtoggle" value="satellite">
+                <label for="streets-v12">Street Map</label>
+            </div>
+            <div class="map-radio">
+                <input id="satellite-streets-v12" type="radio" name="rtoggle" value="satellite">
+                <label for="satellite-streets-v12">Satellite</label>
+            </div>
+            <div class="map-radio">
+                <input id="light-v11" type="radio" name="rtoggle" value="light">
+            <label for="light-v11">Light</label>
+            </div>
+            <div class="map-radio">
+                <input id="dark-v11" type="radio" name="rtoggle" value="dark">
+                <label for="dark-v11">Dark</label>
+            </div>
+        </div>
+        <div class="location-card">
+            <div class="title">
+                Our Location
+            </div>
+            <div class="store-address">
+                G/F, Main Mall,<br>
+                Seaside Blvd,
+                123, Pasay, 1300 <br>
+                Metro Manila
+            </div>
+            <div class="store-hours">
+                <h6>Open Hours:</h6>
+                Mon-Fri 10AM-6PM <br>
+                Sat-Sun 10AM-5PM
+            </div>
+        </div>
     </div>
     <div class="section contact-form">
         <div class="container">
             <div class="row justify-content-between">
                 <div class="form-left col-lg-6 col-sm-12">
-                    <h3 class="section-title">Contact Form<br>_</h3>
+                    <h3 class="section-title">Message Us<br>_</h3>
                     <p>Have any questions? Reach out and we'll do our best!</p>
                     <p>Use the form for general inquiries. For business inquiries please email: business@redarcade.com</p>
                 </div>
@@ -137,9 +176,8 @@
     </div>
     <footer>
         <div class="address-bar">
-            <div class="container d-flex justify-content-center">
-                <!-- MOA Pasay, Philippines -->
-                G/F, Main Mall, Seaside Blvd, 123, Pasay, Philippines 1300
+            <div class="container">
+                All rights reserved 2023
             </div>
         </div>
     </footer>
