@@ -46,6 +46,9 @@ p, label, .form-control{
 .navbar-nav{
     margin-left: auto;
 }
+.navbar-brand{
+  overflow: hidden;
+}
 
 .address-bar{
     /* background-color: #500000; */
