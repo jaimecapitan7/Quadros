@@ -1,5 +1,5 @@
 /* The Modal (background) */
-.modalMenu {
+.menu_modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -13,7 +13,7 @@
   }
   
   /* The Close Button */
-  .close {
+  .menu_modal_close {
     color: #aaa;
     float: right;
     font-size: 35px;
@@ -21,8 +21,8 @@
     margin-top: -15px;
   }
   
-  .close:hover,
-  .close:focus {
+  .menu_modal_close:hover,
+  .menu_modal_close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -36,10 +36,10 @@
   }
   
   /* Modal Body */
-  .modal-body {padding: 2px 16px;}
+  .menu_modal-body {padding: 2px 16px;}
   
   /* Modal Footer */
-  .modal-footer {
+  .menu_modal-footer {
     padding: 2px 16px;
     background-color: #ffff;
     color: white;
@@ -67,7 +67,7 @@
 
   
   /* Modal Content */
-  .modal-content {
+  .menu_modal-content {
     position: relative;
     background-color: #fefefe;
     margin: auto;
@@ -85,3 +85,79 @@
     from {top: -300px; opacity: 0}
     to {top: 0; opacity: 1}
   }
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.gallerymodal{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.697); /* Black w/ opacity */
+
+}
+
+  .gallerymodal-content {
+    position: relative;
+    background-color: #1b1b1b;
+    margin: auto;
+    padding: 0;
+    max-height: 80%;
+    max-width: 80%;
+    overflow: hidden;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  }
+  /* The Close Button */
+  .gallerymodal_close {
+    color: #c93948;
+    position: absolute;
+    top: -15px;
+    right: 5px;
+    font-size: 35px;
+    font-weight: thin;
+  }
+  
+  .gallerymodal_close:hover,
+  .gallerymodal_close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/* Next & previous buttons */
+.prev,
+.next {
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color:#c93948;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(93, 11, 14, 0.5);
+  color: white;
+}
