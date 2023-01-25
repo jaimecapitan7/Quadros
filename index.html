@@ -25,6 +25,7 @@
     <!-- in house CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="icon" href="./asset/icon.png" type="image/x-icon">
 </head>
 <body>
@@ -194,6 +195,35 @@
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div id="modalmenu" class="modal">
+        <div class="modal-content">
+            <div class="modal-img">
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-menu-name"></div>
+                <div class="modal-menu-desc"></div>
+                <div class="form-floating mb-2 mt-2">
+                    <textarea class="form-control" id="modal-note" style="height: 100px"></textarea>
+                    <label for="modal-note">Special Instruction</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div>
+                    <div>
+                        Qty
+                        <div class="input-group mb-3">
+                            <button class="btn btn-outline-secondary" type="button">-</button>
+                            <input type="text" class="form-control" placeholder="" aria-label="Example text with two button addons">
+                            <button class="btn btn-outline-secondary" type="button">+</button>
+                        </div>
+                    </div>
+                    <div>price</div>
+                </div>
+                <button>Add to cart</button>
             </div>
         </div>
     </div>

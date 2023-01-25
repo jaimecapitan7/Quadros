@@ -3,19 +3,24 @@ const menulist = [
     {
     "category" : "Pares",
     "menulist" : [
-        {
+        {   "menuid": "p1",
+            "img_url": "../asset/menupictures/beefp+friedrice.jpg",
             "name":"Q’s Classic Beef Pares w/ Garlic Fried rice ",
             "price": 130,
             "Description": "Beef Pares + Garlic Fried Rice + Soup",
             "rating": 5
         },
         {
+            "menuid": "p2",
+            "img_url": "../asset/menupictures/beefp+rice.jpg",
             "name":"Q’s Classic Beef Pares w/ rice ",
             "price": 120,
             "Description": "Beef Pares + Rice+ Soup",
             "rating": 3
         },
         {
+            "menuid": "p3",
+            "img_url": "../asset/menupictures/beefp+mami.jpg",
             "name":"Q’s Classic Beef pares w/ Mami  ",
             "price": 110,
             "Description": "Beef Pares + Special Mami",
@@ -28,23 +33,29 @@ const menulist = [
         "category" : "Rice Meals ",
         "menulist" : [
             {
+                "menuid": "r1",
+                "img_url": "../asset/menupictures/breadedPC+Rice.jpg",
                 "name":"Q’s Porkchop with Veggies ",
                 "price": 130,
                 "Description": "Breaded Porkchop + Rice + Veggies",
                 "rating": 3
             },
             {
-            "name":"Q’s Sisig with rice with Egg  ",
+                "menuid": "r2",
+                "img_url": "../asset/menupictures/sisig+rice+egg.jpg",
+                "name":"Q’s Sisig with rice with Egg  ",
                 "price": 135,
                 "Description": "Spicy/Regular Sizzling Sisig + Rice + Egg",
                 "rating": 3
             },
             {
+                "menuid": "r3",
+                "img_url": "../asset/menupictures/lechonkawali.jpg",
                 "name":"Q’s Lechon kawali",
-                    "price": 130,
-                    "Description": "Crunchy Lechon Kawali + Rice",
-                    "rating": 3
-                },
+                "price": 130,
+                "Description": "Crunchy Lechon Kawali + Rice",
+                "rating": 3
+            },
         ]
     },
 
@@ -52,18 +63,24 @@ const menulist = [
         "category" : "Toppings",
         "menulist" : [
             {
+                "menuid": "t1",
+                "img_url": "../asset/menupictures/bistek.jpg",
                 "name":"Bistek ala Quadros ",
                 "price": 120,
                 "Description": "Beef Stew + Rice",
                 "rating": 3
             },
             {
+                "menuid": "t2",
+                "img_url": "../asset/menupictures/gbutterdchix.jpg",
                 "name":"Bawang Butter Chix  ",
                 "price": 110,
                 "Description": "Buttered Chicken Sauted in Garlic + Rice",
                 "rating": 3
             },
             {
+                "menuid": "t3",
+                "img_url": "../asset/menupictures/chickenpares+rice.jpg",
                 "name":"Chix ala pares",
                 "price": 125,
                 "Description": "Chicken cooked as Beef Pares + Rice",
@@ -76,19 +93,25 @@ const menulist = [
         "category" : "Extras",
         "menulist" : [
             {
+                "menuid": "x1",
+                "img_url": "../asset/menupictures/garlicfr.jpg",
                 "name":"Garlic Fried Rice",
                 "price": 25,
                 "Description": "Fried Rice + Toasted Garlic",
                 "rating": 3
             },
             {
+                "menuid": "x2",
+                "img_url": "../asset/menupictures/soda-pop.jpg",
                 "name":"Soda",
                 "price": 30,
                 "Description": "Ice Cold Drinks",
                 "rating": 3
             },
             {
-                "name":"Sola's Bottled Iced Tea",
+                "menuid": "x3",
+                "img_url": "../asset/menupictures/solas.jpg",
+                "name":"Sola’s Bottled Iced Tea",
                 "price": 30,
                 "Description": "Bottled Iced Tea",
                 "rating": 3
@@ -97,11 +120,35 @@ const menulist = [
     }
 ];
 
+// Get the modal
+var modal = document.getElementById("modalmenu");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+const showModalMenu = (menu) =>{
+    const menujson = JSON.parse(menu);
+    // console.log(menu);
+    modal.style.display = "flex";
+    modal.querySelector('.modal-img').style = `background-image : url("${menujson.img_url}")`;
+    modal.querySelector('.modal-menu-name').innerText = menujson.name;
+    modal.querySelector('.modal-menu-desc').innerText = menujson.Description;
+}
 
 
 const menulistDisplay = document.querySelector("#menulist");
-
-
 // load menu
 const loadMenu = () => {
     for ( let categories of menulist ) {
@@ -114,14 +161,14 @@ const loadMenu = () => {
         categoryCard.append(categoryCardDiv);
         categoryCardDiv.innerText = `${categories.category}`;
 
-        for ( let menu of categories.menulist ) {
-            
+        for ( let menu of categories.menulist ) { 
             const menu_listDiv =  document.createElement("div");
             menu_listDiv.classList.add("menu-list");
             categoryCard.append(menu_listDiv);
 
             const menu_itemDiv = document.createElement("div");
             menu_itemDiv.classList.add("menu-item");
+            menu_itemDiv.setAttribute("onclick",`showModalMenu('${JSON.stringify(menu)}');`);
             menu_listDiv.append(menu_itemDiv);
 
             const menu_masterDiv = document.createElement("div");
