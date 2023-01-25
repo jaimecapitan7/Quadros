@@ -4,7 +4,7 @@ const bounds = [
     [119.968235, 13.517080], // Southwest coordinates
     [122.006774, 15.552100] // Northeast coordinates
     ];
-var map = new mapboxgl.Map({
+let map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v12',
     // style: 'mapbox://styles/jdhenvir/cldafjtju000601o7bc6v6qtd',

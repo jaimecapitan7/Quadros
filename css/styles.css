@@ -125,9 +125,10 @@ p, label, .form-control{
 .menu-logo{
   padding: 10px;
   margin: 5px;
-  width: 340px;
+  width: 100px;
   order: 2;
 }
+
 
 .categoryCard {
   padding: 10px;
