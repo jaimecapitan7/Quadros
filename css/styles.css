@@ -129,7 +129,7 @@ p, label, .form-control{
   width: 340px;
   order: 2;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .menu-logo{
     display: flex;
     justify-content: center;
