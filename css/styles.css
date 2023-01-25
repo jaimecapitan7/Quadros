@@ -125,13 +125,29 @@ p, label, .form-control{
 .menu-logo{
   padding: 10px;
   margin: 5px;
-  width: 100px;
+  width: 340px;
   order: 2;
+}
+@media (max-width: 1000px) {
+  .menu-logo{
+    display: flex;
+    justify-content: center;
+    order: 1;
+    width: 100%;
+  }
+  
+  #pares{
+    order: 2;
+  }
+  .categoryCard{
+    order: 3;
+  }
+
 }
 
 
 .categoryCard {
-  padding: 10px;
+  padding: 10px 50px;
   margin: 5px;
   width: 340px;
   order: 3;
