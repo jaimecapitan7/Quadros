@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/map.css">
     <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/sidebar.css">
     <link rel="icon" href="./asset/icon.png" type="image/x-icon">
 </head>
 <body>
@@ -55,7 +56,8 @@
                     </li>
                 </ul>
             </div>
-            <i class="bi bi-cart3"></i>
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="bi bi-cart3 btn-icon"></i></button>
+            
         </div>
     </nav>
     <div id="banner">
@@ -278,6 +280,26 @@
                 </div>
                 <button class="btn-modal-footer">Add to cart</button>
             </div>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end bg-dark text-white" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Your Pickup Order</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body body-of-canvas">
+          <div class="output-order">
+            <!-- output order -->
+          </div>
+          <div class="output-totalprice">
+            <!-- output price -->
+          </div>
+          <div class="empty-btn-div">
+            <button class="empty-btn">EMPTY CART</button>
+          </div>
+          <div class="checkout-btn-div d-flex justify-content-center">
+            <button type="submit" class="checkout-btn"><a href="./checkoutpage.html" target="_blank">CHECKOUT</a></button>
+          </div>
         </div>
     </div>
     <footer>

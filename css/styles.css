@@ -25,6 +25,11 @@ html::-webkit-scrollbar-track {
 html::-webkit-scrollbar-thumb {
   background-color: #AB3903;
 }
+
+.btn-icon{
+  color: #ffffff;
+}
+
 .section{
     min-height: 100vh;
     position: relative;
