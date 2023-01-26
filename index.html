@@ -53,8 +53,9 @@
                     </li>
                 </ul>
             </div>
-            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="bi bi-cart3 btn-icon"></i></button>
-            
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+                aria-controls="offcanvasWithBothOptions"><i class="bi bi-cart3 btn-icon"></i></button>
+
         </div>
     </nav>
     <div id="banner">
@@ -212,35 +213,35 @@
     <!-- Modal for gallery -->
     <div class="gallerymodal" id="lightbox">
         <div class="gallerymodal-content">
-        <span type="button" class="gallerymodal_close">&times;</span>
-        <div class="mySlides">
-            <img src="./asset/menupictures/pares-meme.jpg" style="width:100%">
+            <span type="button" class="gallerymodal_close">&times;</span>
+            <div class="mySlides">
+                <img src="./asset/menupictures/pares-meme.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="./asset/menupictures/bonemarrow-meme.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="./asset/menupictures/lines-sa-pagkain.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="./asset/menupictures/rice-meme.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="./asset/handBowl.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="./asset/smoky.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="./asset/spoonful.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="./asset/menupictures/garlicfr.jpg" style="width:100%">
+            </div>
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-        <div class="mySlides">
-            <img src="./asset/menupictures/bonemarrow-meme.jpg" style="width:100%">
-        </div>
-        <div class="mySlides">
-            <img src="./asset/menupictures/lines-sa-pagkain.jpg" style="width:100%">
-        </div>
-        <div class="mySlides">
-            <img src="./asset/menupictures/rice-meme.jpg" style="width:100%">
-        </div>
-        <div class="mySlides">
-            <img src="./asset/handBowl.jpg" style="width:100%">
-        </div>
-        <div class="mySlides">
-            <img src="./asset/smoky.jpg" style="width:100%">
-        </div>
-        <div class="mySlides">
-            <img src="./asset/spoonful.jpg" style="width:100%">
-        </div>
-        <div class="mySlides">
-            <img src="./asset/menupictures/garlicfr.jpg" style="width:100%">
-        </div>
-        <!-- Next/previous controls -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>        
     </div>
 
     <!-- Modal for individual menu -->
@@ -258,42 +259,42 @@
                 </div>
             </div>
             <div class="menu_modal-footer">
-                <div>
-                    <div style="color: black;">
-                        QTY
-                        <div class="input-group mb-3">
-                            <button class="btn btn-outline-secondary rounded-circle col-2 " type="button">-</button>
-                            <input type="text" class="form-control col-1" placeholder=""
-                                aria-label="Example text with two button addons">
-                            <button class="btn btn-outline-secondary rounded-circle col-2" type="button">+</button>
-                            <div class="col-3"></div>
-                            <div class="price col-4">$10.00</div>
+                <div class="row justify-content-between align-items-center mb-2">
+                    <div class="col-5">
+                        <div class="input-group">
+                            <button class="btn btn-outline-secondary" type="button" onclick="qty_decr()">-</button>
+                            <input type="text" class="form-control" id="modal_menu_qty" value="1">
+                            <button class="btn btn-outline-secondary" type="button" onclick="qty_incr()">+</button>
                         </div>
                     </div>
-
+                    <div class="col-5 d-flex align-items-center justify-content-end">
+                        <div class="price" id="modal_menu_price"></div>
+                    </div>
                 </div>
                 <button class="btn-modal-footer">Add to cart</button>
             </div>
         </div>
     </div>
-    <div class="offcanvas offcanvas-end bg-dark text-white" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+    <div class="offcanvas offcanvas-end bg-dark text-white" data-bs-scroll="true" tabindex="-1"
+        id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Your Pickup Order</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Your Pickup Order</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body body-of-canvas">
-          <div class="output-order">
-            <!-- output order -->
-          </div>
-          <div class="output-totalprice">
-            <!-- output price -->
-          </div>
-          <div class="empty-btn-div">
-            <button class="empty-btn">EMPTY CART</button>
-          </div>
-          <div class="checkout-btn-div d-flex justify-content-center">
-            <button type="submit" class="checkout-btn"><a href="./checkoutpage.html" target="_blank">CHECKOUT</a></button>
-          </div>
+            <div class="output-order">
+                <!-- output order -->
+            </div>
+            <div class="output-totalprice">
+                <!-- output price -->
+            </div>
+            <div class="empty-btn-div">
+                <button class="empty-btn">EMPTY CART</button>
+            </div>
+            <div class="checkout-btn-div d-flex justify-content-center">
+                <button type="submit" class="checkout-btn"><a href="./checkoutpage.html"
+                        target="_blank">CHECKOUT</a></button>
+            </div>
         </div>
     </div>
     <footer>

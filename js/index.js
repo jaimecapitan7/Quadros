@@ -129,6 +129,7 @@ let closelightbox = document.getElementsByClassName("gallerymodal_close")[0];
 // When the user clicks on <span> (x), close the modal
 closemenu.onclick = function() {
   modal.style.display = "none";
+  document.getElementById("modal_menu_qty").value = 1;
 }
 closelightbox.onclick = function() {
     lightbox.style.display = "none";
@@ -145,11 +146,15 @@ window.onclick = function(event) {
 
 const showModalMenu = (menu) =>{
     const menujson = JSON.parse(menu);
-    // console.log(menu);
     modal.style.display = "flex";
     modal.querySelector('.modal-img').style = `background-image : url("${menujson.img_url}")`;
     modal.querySelector('.modal-menu-name').innerText = menujson.name;
     modal.querySelector('.modal-menu-desc').innerText = menujson.Description;
+    modal.querySelector('#modal_menu_price').dataset.itemprice=menujson.price;
+    modal.querySelector('#modal_menu_price').innerText = menujson.price.toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'PHP'
+    });;
 }
 
 
@@ -240,4 +245,34 @@ function plusSlides(n) {
 // Thumbnail image controls
 function currentSlide(n) {
     showSlides(slideIndex = n);
+}
+
+
+
+const qty_incr = () =>{
+    const qty = document.getElementById("modal_menu_qty");
+    const price = document.getElementById("modal_menu_price");
+    let itemprice = document.getElementById("modal_menu_price").dataset.itemprice;
+    if(qty.value > 0){
+        qty.value++;
+        itemprice = +itemprice * qty.value;
+        price.innerText = itemprice.toLocaleString('en-US', {
+            style: 'currency',
+            currency: 'PHP'
+        });;
+    }
+}
+
+const qty_decr = () =>{
+    const qty = document.getElementById("modal_menu_qty");
+    const price = document.getElementById("modal_menu_price");
+    let itemprice = document.getElementById("modal_menu_price").dataset.itemprice;
+    if(qty.value > 1){
+        qty.value--;
+        itemprice = +itemprice * qty.value;
+        price.innerText = itemprice.toLocaleString('en-US', {
+            style: 'currency',
+            currency: 'PHP'
+        });;
+    }
 }
